@@ -1,6 +1,6 @@
 # Exercice à réaliser
 
-Je veux créer une vidéothèque, à terme, elle sera en mesure d'accueillir plusieurs centaines, voire milliers d'oeuvres. Pour le moment, je n'ai que 6 films mais je ne veux pas créer d'objets manuellements pour chacun d'eux (passer par une classe à instancier).
+Je veux créer une  vidéothèque, à terme, elle sera en mesure d'accueillir plusieurs centaines, voire milliers d'oeuvres. Pour le moment, je n'ai que 6 films mais je ne veux pas créer d'objets manuellements pour chacun d'eux (passer par une classe à instancier).
 
 J'ai besoin :
 - d'un titre
