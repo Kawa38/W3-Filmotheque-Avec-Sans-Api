@@ -17,20 +17,21 @@ const templateElement = (element_name, text, parent) => {
 
 let divF =  templateElement('div',"" ,page);
 divF.id = "filmTitre";
+
+let  affImage = templateElement("img","",divF);
+affImage.src=baseFilm[filmId].image;
+affImage.id = "ImgGrand";
+
 let titre = templateElement("h1",baseFilm[filmId].titre , divF);
 titre.id = "filmTitre";
 let qui = templateElement("h1",baseFilm[filmId].qui, divF);
 let description = templateElement("h1",baseFilm[filmId].description , divF);
-let  affImage = templateElement("img","",divF);
 affImage.style.display="block";
-affImage.src=baseFilm[filmId].image;
-affImage.id = "ImgGrand";
 
-
+    //affichage de la bande annonce Youtube
 let affvideo = templateElement("iframe","",divF);
-console.log (baseFilm[filmId].bandeAnnonce)
-affvideo.innerhtml= baseFilm[filmId].bandeAnnonce;
-// A finir - faire afficher la video  
+affvideo.outerHTML= baseFilm[filmId].bandeAnnonce;
+ 
 
 let totalD = templateElement("h1",baseFilm[filmId].totalD , divF);
 totalD.id ="filmD";

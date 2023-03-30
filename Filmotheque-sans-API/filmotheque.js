@@ -42,6 +42,12 @@ function afficherList(film){
    afTitre.id ="filmTitre";
    afTitre.textContent = film.titre;;
 
+   // le bouton qui va vers la page affichant la fiche d'un film
+   const lien = document.createElement("a");
+   lien.innerHTML = "Plus d'info ?";
+   filmD.appendChild(lien);
+   lien.setAttribute ("href", ("pagefilm.html?id=" + indexFilm));
+
    const afDescription = document.createElement("p");
    filmD.appendChild(afDescription);
    afDescription.textContent = film.description;
@@ -54,7 +60,7 @@ function afficherList(film){
    afData.appendChild(afTotalDH);
    afTotalDH.textContent =  film.totalD + "Mn / "+ (Math.round(film.totalD/60)) +'H' + (film.totalD%60); // conversion du temp en minutes en heures
    
-   // affichage d'une icone en fonction de vue ou pas vue
+   // affichage d'une icone si vue ou pas vue
    // remarque : pourrait être amélioré afin d'avoir une tolérance sur le début et sur la fin .. 
    const Visu = document.createElement("p");
    afData.appendChild(Visu);
@@ -65,11 +71,6 @@ function afficherList(film){
    afData.appendChild(afvisioD);
    afvisioD.textContent = "Visionné: "+ film.visioD + "Mn";
 
-      // le bouton qui va vers la page affichant la fiche d'un film
-      const lien = document.createElement("a");
-      lien.innerHTML = "Video";
-      afData.appendChild(lien);
-      lien.setAttribute ("href", ("pagefilm.html?id=" + indexFilm));
 
 }
 

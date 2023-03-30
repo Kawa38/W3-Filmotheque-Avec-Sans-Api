@@ -3,7 +3,7 @@
 const filmId = new URLSearchParams(window.location.search).get("id");
 console.log(filmId); // pour l'intérrogation de l'api
 let body = document.querySelector("body"); // pour affichage dans le html
-let page = document.querySelector("#page");
+let page = document.querySelector("#page");// idem
 
 
 // Interrogation de l'api
@@ -31,13 +31,15 @@ baseFilmApi
             affImage.style.display="block";
             affImage.src=film.imageUrl;
             affImage.id = "ImgGrand";
+
+
             };
         };
       }
       )
 .catch(function(error){console.log(error)})
             
-// Functions permettant de simplifier la création du html
+// Fonctions permettant de simplifier la création du html
 
 const templateElement = (element_name, text, parent) => {
   const template = document.createElement(element_name);
