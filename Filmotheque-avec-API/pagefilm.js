@@ -26,7 +26,9 @@ baseFilmApi
             let titre = templateElement("h1", film.titre, divF);
             titre.id = "filmTitre";
             let qui = templateElement("h1", film.realisateur, divF);
+            qui.id="qui";
             let description = templateElement("h1", film.description, divF);
+            description.id="description"
             let  affImage = templateElement("img","",divF);
             affImage.style.display="block";
             affImage.src=film.imageUrl;

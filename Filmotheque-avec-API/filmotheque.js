@@ -58,7 +58,7 @@ function afficherList(film){
 
 // le bouton qui va vers l'autre page et paser le numéro du film dans l'url
       const lien = document.createElement("a");
-      lien.innerHTML = "Video";
+      lien.innerHTML = "Plus d'informations ? ";
       afData.appendChild(lien);
       indexFilm = film._id;
       lien.setAttribute ("href", ("pagefilm.html?id=" + indexFilm));
